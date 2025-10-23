@@ -72,7 +72,9 @@ which tunnels the original connection:
 
 > Application -> Target Server(8388/tcp) 
 
-### Build from source
+**_OR YOU CAN START WITH THIS COMPLETE CONFIGURATION:_** [local](https://github.com/xtaci/kcptun/blob/master/dist/local.json.example) --> [server](https://github.com/xtaci/kcptun/blob/master/dist/server.json.example)
+
+### Building from source
 
 ```
 $ git clone https://github.com/xtaci/kcptun.git
@@ -97,13 +99,13 @@ All precompiled releases are generated from `build-release.sh` script.
 
 ### Basic Tuning Guide
 
-#### Improving Throughput
+#### To Improve Throughput
 
 > **Q: I have a high-speed network link. How can I maximize bandwidth?**
 
 > **A:** Increase `-rcvwnd` on the KCP Client and `-sndwnd` on the KCP Server **simultaneously and gradually**. The minimum of these values determines the maximum transfer rate of the link, as `wnd * mtu / rtt`. Then, try downloading something to see if it meets your requirements. (The MTU is adjustable with `-mtu`.)
 
-#### Improving Latency
+#### To Improve Latency
 
 > **Q: I'm using kcptun for gaming and want to avoid any lag.**
 
@@ -405,6 +407,11 @@ These parameters **MUST** be **IDENTICAL** on **BOTH** side:
 1. -nocomp
 1. -smuxver
 
+### Example Configurations
+
+1. [Local](https://github.com/xtaci/kcptun/blob/master/dist/local.json.example)
+1. [Server](https://github.com/xtaci/kcptun/blob/master/dist/server.json.example)
+
 ### References
 
 1. https://github.com/skywind3000/kcp -- KCP - A Fast and Reliable ARQ Protocol.
@@ -423,6 +430,8 @@ These parameters **MUST** be **IDENTICAL** on **BOTH** side:
 1. http://www.lartc.org/ -- Linux Advanced Routing & Traffic Control
 1. https://en.wikipedia.org/wiki/Noisy-channel_coding_theorem -- Noisy channel coding theorem
 1. https://zhuanlan.zhihu.com/p/53849089 -- kcptun开发小记
+
+
 
 
 （注意：我没有任何社交网站的账号，请小心骗子。）

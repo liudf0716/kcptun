@@ -579,8 +579,5 @@ In summary: `none` keeps the protocol header (plaintext payload), while `null` s
 1. https://en.wikipedia.org/wiki/Noisy-channel_coding_theorem -- Noisy channel coding theorem
 1. https://zhuanlan.zhihu.com/p/53849089 -- kcptun开发小记
 
-### Donation
-Click [here](https://github.com/xtaci/xtaci/issues/2) to donate.
-
 
 ***（注意：kcptun没有任何社交网站的账号，请小心骗子。）***
